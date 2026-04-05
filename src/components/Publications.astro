@@ -1,0 +1,46 @@
+---
+import type { Project } from '../lib/parse-projects';
+
+interface Props {
+  papers: Project[];
+}
+
+const { papers } = Astro.props;
+---
+
+<section id="publications" class="py-24">
+  <div class="max-w-4xl mx-auto px-6">
+    <!-- Section heading -->
+    <div class="flex items-center gap-4 mb-16">
+      <div class="w-1.5 h-1.5 rounded-full" style="background: var(--color-accent);" />
+      <h2 class="text-2xl font-semibold" style="color: var(--color-text);">
+        Publications
+      </h2>
+      <div class="flex-1 h-px" style="background: var(--color-border);" />
+    </div>
+
+    <ol class="space-y-6" reversed>
+      {papers.map((paper, i) => (
+        <li class="flex gap-4">
+          <span
+            class="shrink-0 w-6 h-6 flex items-center justify-center rounded-full text-xs font-medium mt-0.5"
+            style="background: var(--color-surface); color: var(--color-accent); border: 1px solid var(--color-border);"
+          >
+            {papers.length - i}
+          </span>
+          <div>
+            <p class="text-sm font-medium leading-relaxed" style="color: var(--color-text);">
+              {paper.title}
+            </p>
+            <p class="mt-1 text-xs" style="color: var(--color-muted);">
+              <span style="color: var(--color-accent);">{paper.journal}</span>
+              {paper.year && <span> · {paper.year}</span>}
+              <span> · {paper.role === '一作' ? 'First Author' : 'Corresponding Author'}</span>
+              <span> · {paper.method}</span>
+            </p>
+          </div>
+        </li>
+      ))}
+    </ol>
+  </div>
+</section>

@@ -1,0 +1,63 @@
+---
+// Edit your contact info here
+const contacts = [
+  { icon: 'email', label: 'Email', value: 'your.email@example.com', href: 'mailto:your.email@example.com' },
+  { icon: 'scholar', label: 'Google Scholar', value: 'Scholar Profile', href: '#' },
+  { icon: 'orcid', label: 'ORCID', value: '0000-0000-0000-0000', href: '#' },
+];
+
+const icons: Record<string, string> = {
+  email: 'M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z',
+  scholar: 'M12 14l9-5-9-5-9 5 9 5zM12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z',
+  orcid: 'M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 4h2v2h-2V6zm-1 4h4v8h-2v-6h-2v-2z',
+};
+---
+
+<section id="contact" class="py-24">
+  <div class="max-w-4xl mx-auto px-6">
+    <!-- Section heading -->
+    <div class="flex items-center gap-4 mb-16">
+      <div class="w-1.5 h-1.5 rounded-full" style="background: var(--color-accent);" />
+      <h2 class="text-2xl font-semibold" style="color: var(--color-text);">
+        Contact
+      </h2>
+      <div class="flex-1 h-px" style="background: var(--color-border);" />
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      {contacts.map((contact) => (
+        <a
+          href={contact.href}
+          class="group rounded-2xl p-6 transition-all duration-300 hover:-translate-y-0.5 block"
+          style="background: var(--color-surface); border: 1px solid var(--color-border);"
+          target={contact.href.startsWith('http') ? '_blank' : undefined}
+          rel={contact.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+        >
+          <div class="flex items-center gap-3">
+            <svg
+              class="w-5 h-5 shrink-0"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              style="color: var(--color-accent);"
+            >
+              <path d={icons[contact.icon] || icons.email} />
+            </svg>
+            <div>
+              <p class="text-xs" style="color: var(--color-muted);">{contact.label}</p>
+              <p class="text-sm font-medium" style="color: var(--color-text);">{contact.value}</p>
+            </div>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .group:hover {
+    border-color: var(--color-accent) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06) !important;
+  }
+</style>

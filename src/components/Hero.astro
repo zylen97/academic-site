@@ -1,0 +1,64 @@
+---
+// Personal info — edit here
+const name = 'Zylen';
+const tagline = 'Academic Researcher';
+const affiliation = 'XX University';
+const bio = 'Research interests in construction project management, supply chain optimization, differential games, and organizational behavior in project-based firms.';
+const keywords = ['Construction Management', 'Supply Chain', 'Differential Games', 'ESG', 'Digital Transformation'];
+---
+
+<section class="py-24 md:py-32">
+  <div class="max-w-4xl mx-auto px-6">
+    <div class="flex flex-col md:flex-row items-center md:items-start gap-10">
+      <!-- Avatar -->
+      <div class="shrink-0">
+        <div
+          class="w-28 h-28 rounded-full overflow-hidden shadow-lg"
+          style="border: 3px solid var(--color-border);"
+        >
+          <img
+            src="/academic-site/avatar.jpg"
+            alt={name}
+            class="w-full h-full object-cover"
+            onerror="this.style.display='none'; this.parentElement.style.background='var(--color-accent)'; this.parentElement.innerHTML='<span style=&quot;color:white;font-size:2.5rem;display:flex;align-items:center;justify-content:center;height:100%&quot;>' + 'Z' + '</span>'"
+          />
+        </div>
+      </div>
+
+      <!-- Info -->
+      <div class="text-center md:text-left">
+        <h1 class="text-4xl md:text-5xl font-bold tracking-tight" style="color: var(--color-text);">
+          {name}
+        </h1>
+        <p class="mt-2 text-lg" style="color: var(--color-accent);">
+          {tagline}
+        </p>
+        <p class="mt-1 text-sm" style="color: var(--color-muted);">
+          {affiliation}
+        </p>
+
+        <!-- Decorative line -->
+        <div class="mt-6 flex items-center gap-3" style={`justify-content: ${typeof window !== 'undefined' ? 'flex-start' : 'center'};`}>
+          <div class="w-8 h-px" style="background: var(--color-accent);" />
+          <div class="w-1.5 h-1.5 rounded-full" style="background: var(--color-accent);" />
+        </div>
+
+        <p class="mt-6 max-w-xl leading-relaxed" style="color: var(--color-text-secondary);">
+          {bio}
+        </p>
+
+        <!-- Keywords -->
+        <div class="mt-6 flex flex-wrap gap-2 justify-center md:justify-start">
+          {keywords.map((kw) => (
+            <span
+              class="px-3 py-1 text-xs rounded-full transition-colors duration-300"
+              style="background: var(--color-surface); color: var(--color-muted); border: 1px solid var(--color-border);"
+            >
+              {kw}
+            </span>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

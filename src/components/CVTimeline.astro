@@ -1,0 +1,116 @@
+---
+import fs from 'node:fs';
+import path from 'node:path';
+
+// Simple YAML parser for our specific structure
+function parseSimpleYaml(content: string) {
+  const lines = content.split('\n');
+  const result: Record<string, any[]> = {};
+  let currentSection = '';
+  let currentItem: Record<string, string> | null = null;
+
+  for (const line of lines) {
+    if (line.startsWith('#') || line.trim() === '') continue;
+
+    // Top-level key (education: or experience:)
+    const sectionMatch = line.match(/^(\w+):\s*$/);
+    if (sectionMatch) {
+      currentSection = sectionMatch[1];
+      result[currentSection] = [];
+      currentItem = null;
+      continue;
+    }
+
+    // New list item
+    const itemMatch = line.match(/^\s+-\s+(\w+):\s*"?([^"]*)"?\s*$/);
+    if (itemMatch) {
+      currentItem = { [itemMatch[1]]: itemMatch[2] };
+      result[currentSection]?.push(currentItem);
+      continue;
+    }
+
+    // Continuation property
+    const propMatch = line.match(/^\s+(\w+):\s*"?([^"]*)"?\s*$/);
+    if (propMatch && currentItem) {
+      currentItem[propMatch[1]] = propMatch[2];
+    }
+  }
+
+  return result;
+}
+
+const cvPath = path.resolve('src/content/cv.yaml');
+const cvContent = fs.readFileSync(cvPath, 'utf-8');
+const cv = parseSimpleYaml(cvContent);
+
+interface TimelineEntry {
+  title: string;
+  subtitle: string;
+  period: string;
+  description?: string;
+}
+
+const entries: TimelineEntry[] = [
+  ...(cv.experience || []).map((e: any) => ({
+    title: e.organization || '',
+    subtitle: e.role || '',
+    period: e.period || '',
+    description: e.description || '',
+  })),
+  ...(cv.education || []).map((e: any) => ({
+    title: e.institution || '',
+    subtitle: e.degree || '',
+    period: e.period || '',
+    description: e.description || '',
+  })),
+];
+---
+
+<section id="cv" class="py-24">
+  <div class="max-w-4xl mx-auto px-6">
+    <!-- Section heading -->
+    <div class="flex items-center gap-4 mb-16">
+      <div class="w-1.5 h-1.5 rounded-full" style="background: var(--color-accent);" />
+      <h2 class="text-2xl font-semibold" style="color: var(--color-text);">
+        Curriculum Vitae
+      </h2>
+      <div class="flex-1 h-px" style="background: var(--color-border);" />
+    </div>
+
+    <!-- Timeline -->
+    <div class="relative pl-8">
+      <!-- Vertical line -->
+      <div
+        class="absolute left-3 top-1 bottom-1 w-px"
+        style="background: var(--color-border);"
+      />
+
+      {entries.map((entry, i) => (
+        <div class="relative mb-10 last:mb-0">
+          <!-- Dot -->
+          <div
+            class="absolute -left-5 top-1.5 w-2.5 h-2.5 rounded-full"
+            style={`background: ${i === 0 ? 'var(--color-accent)' : 'var(--color-muted)'};`}
+          />
+
+          <div>
+            <span class="text-xs font-medium" style="color: var(--color-accent);">
+              {entry.period}
+            </span>
+            <h3 class="mt-1 text-sm font-semibold" style="color: var(--color-text);">
+              {entry.title}
+            </h3>
+            <p class="text-sm" style="color: var(--color-text-secondary);">
+              {entry.subtitle}
+            </p>
+            {entry.description && (
+              <p class="mt-1 text-xs" style="color: var(--color-muted);">
+                {entry.description}
+              </p>
+            )}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

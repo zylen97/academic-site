@@ -1,0 +1,48 @@
+---
+import ProjectCard from './ProjectCard.astro';
+import type { ProjectGroups } from '../lib/parse-projects';
+
+interface Props {
+  projects: ProjectGroups;
+}
+
+const { projects } = Astro.props;
+
+const sections = [
+  { key: 'published' as const, title: 'Published', subtitle: '已发表', items: projects.published },
+  { key: 'underReview' as const, title: 'Under Review', subtitle: '投稿中', items: projects.underReview },
+  { key: 'inProgress' as const, title: 'In Progress', subtitle: '撰写中', items: projects.inProgress },
+].filter((s) => s.items.length > 0);
+---
+
+<section id="research" class="py-24">
+  <div class="max-w-4xl mx-auto px-6">
+    <!-- Section heading -->
+    <div class="flex items-center gap-4 mb-16">
+      <div class="w-1.5 h-1.5 rounded-full" style="background: var(--color-accent);" />
+      <h2 class="text-2xl font-semibold" style="color: var(--color-text);">
+        Research Projects
+      </h2>
+      <div class="flex-1 h-px" style="background: var(--color-border);" />
+    </div>
+
+    {sections.map((section) => (
+      <div class="mb-16 last:mb-0">
+        <div class="flex items-baseline gap-3 mb-6">
+          <h3 class="text-lg font-medium" style="color: var(--color-text);">
+            {section.title}
+          </h3>
+          <span class="text-xs" style="color: var(--color-muted);">
+            {section.subtitle} · {section.items.length}
+          </span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {section.items.map((project) => (
+            <ProjectCard project={project} />
+          ))}
+        </div>
+      </div>
+    ))}
+  </div>
+</section>

@@ -1,0 +1,22 @@
+# CV data — edit this file to update your CV section
+education:
+  - institution: "XX University"
+    degree: "Ph.D. in Management Science and Engineering"
+    period: "20XX — Present"
+    description: "Research focus: construction project management, supply chain optimization"
+
+  - institution: "XX University"
+    degree: "M.S. in Management Science and Engineering"
+    period: "20XX — 20XX"
+    description: ""
+
+  - institution: "XX University"
+    degree: "B.S. in Engineering Management"
+    period: "20XX — 20XX"
+    description: ""
+
+experience:
+  - organization: "XX University"
+    role: "Lecturer / Assistant Professor"
+    period: "20XX — Present"
+    description: ""

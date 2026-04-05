@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+/* Claude.ai-inspired warm palette */
+@theme {
+  --color-bg: #E8E6DC;
+  --color-surface: #FAF9F0;
+  --color-text: #141413;
+  --color-text-secondary: #30302E;
+  --color-muted: #87867F;
+  --color-accent: #D97757;
+  --color-accent-hover: #C4654A;
+  --color-accent-secondary: #EDA100;
+  --color-border: rgba(135, 134, 127, 0.2);
+}
+
+/* Dark mode overrides */
+.dark {
+  --color-bg: #1A1A18;
+  --color-surface: #242422;
+  --color-text: #E8E6DC;
+  --color-text-secondary: #B8B7B0;
+  --color-muted: #6B6A64;
+  --color-accent: #E8956F;
+  --color-accent-hover: #F0A882;
+  --color-accent-secondary: #F5BB33;
+  --color-border: rgba(107, 106, 100, 0.3);
+}
+
+/* Base styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.7;
+  letter-spacing: 0.01em;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Selection */
+::selection {
+  background-color: var(--color-accent);
+  color: white;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-muted);
+  border-radius: 3px;
+}
