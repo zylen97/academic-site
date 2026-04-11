@@ -1,0 +1,137 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Academic researcher portfolio — research projects, publications, and CV."><link rel="icon" type="image/svg+xml" href="/academic-site/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"><title>任我行：在枷锁中选择你的自由 | Zylen</title><!-- Dark mode: read preference before paint to prevent flash --><script>
+      (function () {
+        const saved = localStorage.getItem('theme');
+        if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script><link rel="stylesheet" href="/academic-site/_astro/Footer.QW1FACuj.css">
+<style>.prose h2{font-size:1.25rem;font-weight:600;margin-top:2rem;margin-bottom:.75rem;color:var(--color-text)}.prose h3{font-size:1.1rem;font-weight:600;margin-top:1.5rem;margin-bottom:.5rem;color:var(--color-text)}.prose p{font-size:.9rem;line-height:1.8;margin-bottom:1rem;color:var(--color-text-secondary)}.prose ul{list-style:none;padding-left:0;margin-bottom:1rem}.prose li{font-size:.9rem;line-height:1.8;color:var(--color-text-secondary);padding-left:1.25rem;position:relative}.prose li:before{content:"";position:absolute;left:0;top:.75rem;width:5px;height:5px;border-radius:50%;background:var(--color-accent)}.prose blockquote{border-left:2px solid var(--color-accent);padding-left:1rem;margin-bottom:1.5rem;font-style:italic;color:var(--color-muted)}.prose code{font-size:.85rem;padding:.15rem .4rem;border-radius:.25rem;background:var(--color-surface);color:var(--color-accent)}.prose figure{margin:2rem 0;text-align:center}.prose figure img{max-width:100%;border-radius:12px;box-shadow:0 2px 12px #00000014}.prose figcaption{margin-top:.5rem;font-size:.8rem;color:var(--color-muted);font-style:italic}.prose strong{font-weight:600;color:var(--color-text)}
+</style></head> <body class="min-h-screen">  <header class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md" style="background-color: rgba(244, 243, 238, 0.8);"> <div class="dark-header-bg"></div> <nav class="max-w-4xl mx-auto px-6 py-4 flex items-center justify-between"> <a href="/academic-site/" class="text-lg font-semibold" style="color: var(--color-text);">
+Zylen
+</a> <!-- Desktop nav --> <div class="hidden md:flex items-center gap-8"> <a href="/academic-site/publications/" class="text-sm transition-colors duration-300" style="color: var(--color-text-secondary); opacity: 0.7;"> Publications </a><a href="/academic-site/research/" class="text-sm transition-colors duration-300" style="color: var(--color-text-secondary); opacity: 0.7;"> Working Papers </a><a href="/academic-site/life/" class="text-sm transition-colors duration-300" style="color: var(--color-text-secondary); opacity: 0.7;"> Life </a><a href="/academic-site/blog/" class="text-sm transition-colors duration-300" style="color: var(--color-accent); opacity: 1;"> Blog </a><a href="/academic-site/cv/" class="text-sm transition-colors duration-300" style="color: var(--color-text-secondary); opacity: 0.7;"> CV </a><a href="/academic-site/contact/" class="text-sm transition-colors duration-300" style="color: var(--color-text-secondary); opacity: 0.7;"> Contact </a> <button id="theme-toggle" class="w-8 h-8 flex items-center justify-center rounded-lg transition-colors duration-300" style="color: var(--color-muted);" aria-label="Toggle dark mode"> <!-- Sun icon (shown in dark mode) --> <svg class="w-4 h-4 hidden dark:block" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"> <circle cx="12" cy="12" r="5"></circle> <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path> </svg> <!-- Moon icon (shown in light mode) --> <svg class="w-4 h-4 block dark:hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"> <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path> </svg> </button> </div> <!-- Mobile menu button --> <button id="mobile-menu-btn" class="md:hidden w-8 h-8 flex items-center justify-center" style="color: var(--color-text);" aria-label="Menu"> <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"> <path d="M3 12h18M3 6h18M3 18h18"></path> </svg> </button> </nav> <!-- Mobile menu --> <div id="mobile-menu" class="hidden md:hidden px-6 pb-4"> <a href="/academic-site/publications/" class="block py-2 text-sm transition-colors duration-300" style="color: var(--color-text-secondary);"> Publications </a><a href="/academic-site/research/" class="block py-2 text-sm transition-colors duration-300" style="color: var(--color-text-secondary);"> Working Papers </a><a href="/academic-site/life/" class="block py-2 text-sm transition-colors duration-300" style="color: var(--color-text-secondary);"> Life </a><a href="/academic-site/blog/" class="block py-2 text-sm transition-colors duration-300" style="color: var(--color-text-secondary);"> Blog </a><a href="/academic-site/cv/" class="block py-2 text-sm transition-colors duration-300" style="color: var(--color-text-secondary);"> CV </a><a href="/academic-site/contact/" class="block py-2 text-sm transition-colors duration-300" style="color: var(--color-text-secondary);"> Contact </a> <button id="theme-toggle-mobile" class="mt-2 text-sm" style="color: var(--color-muted);">
+Toggle theme
+</button> </div> </header> <!-- Spacer for fixed header --> <div class="h-16"></div> <script>
+  function toggleTheme() {
+    const html = document.documentElement;
+    const isDark = html.classList.toggle('dark');
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    // Update header bg
+    const header = document.querySelector('header');
+    if (header) {
+      header.style.backgroundColor = isDark
+        ? 'rgba(30, 30, 28, 0.8)'
+        : 'rgba(244, 243, 238, 0.8)';
+    }
+  }
+
+  // Init header bg
+  (function() {
+    const header = document.querySelector('header');
+    if (header && document.documentElement.classList.contains('dark')) {
+      header.style.backgroundColor = 'rgba(30, 30, 28, 0.8)';
+    }
+  })();
+
+  document.getElementById('theme-toggle')?.addEventListener('click', toggleTheme);
+  document.getElementById('theme-toggle-mobile')?.addEventListener('click', toggleTheme);
+
+  // Mobile menu toggle
+  document.getElementById('mobile-menu-btn')?.addEventListener('click', () => {
+    document.getElementById('mobile-menu')?.classList.toggle('hidden');
+  });
+
+  // Close mobile menu on link click
+  document.querySelectorAll('#mobile-menu a').forEach((link) => {
+    link.addEventListener('click', () => {
+      document.getElementById('mobile-menu')?.classList.add('hidden');
+    });
+  });
+</script> <main> <article class="py-24"> <div class="max-w-3xl mx-auto px-6"> <!-- Back link --> <a href="/academic-site/blog/" class="inline-flex items-center gap-1 text-xs mb-8 transition-colors duration-300" style="color: var(--color-muted);"> <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"> <path d="M19 12H5M12 19l-7-7 7-7"></path> </svg>
+Back to Blog
+</a> <!-- Header --> <h1 class="text-2xl md:text-3xl font-bold leading-tight" style="color: var(--color-text);"> 任我行：在枷锁中选择你的自由 </h1> <div class="mt-3 flex items-center gap-3"> <span class="text-xs" style="color: var(--color-muted);">2026-04-11</span> <span class="px-2 py-0.5 text-xs rounded-full" style="background: var(--color-surface); color: var(--color-muted); border: 1px solid var(--color-border);"> Philosophy </span><span class="px-2 py-0.5 text-xs rounded-full" style="background: var(--color-surface); color: var(--color-muted); border: 1px solid var(--color-border);"> Music </span><span class="px-2 py-0.5 text-xs rounded-full" style="background: var(--color-surface); color: var(--color-muted); border: 1px solid var(--color-border);"> Freedom </span> </div> <!-- Divider --> <div class="mt-8 mb-10 flex items-center gap-3"> <div class="w-8 h-px" style="background: var(--color-accent);"></div> <div class="w-1.5 h-1.5 rounded-full" style="background: var(--color-accent);"></div> </div> <!-- Content --> <div class="prose"><blockquote>「天空海闊你與我，可會變（誰沒有變）」</blockquote>
+<h2>深夜的绿灯</h2>
+<p>凌晨一点，我坐在办公室里改一篇论文的审稿意见。第三轮了。reviewer 2 还是那几个问题换着花样问，我还是那几个回答换着花样写。窗外的马路空无一人，红绿灯依然在忠实地变换颜色——没有车，没有行人，但它还是红了绿，绿了红。</p>
+<p>那一刻我突然想起《任我行》里的一句词：</p>
+<blockquote>「從何時開始忌諱空山無人，從何時開始怕遙望星塵」</blockquote>
+<p>我在等什么？或者说，我在等谁的绿灯？</p>
+<p>这个问题比审稿意见难回答多了。</p>
+<figure><img src="/academic-site/blog/fc-01-midnight-lights.png" alt="" loading="lazy" /></figure>
+<h2>林夕写了什么</h2>
+<p>很多人把《任我行》当作一首关于自由的歌来听。叛逆、出走、天空海阔。但如果你真的逐字去读林夕的词，你会发现他写的根本不是反叛宣言。</p>
+<p>他写的是一个人<strong>意识到自己不自由</strong>之后的惆怅。</p>
+<p>注意，是惆怅，不是愤怒。</p>
+<blockquote>「從何時開始忌諱空山無人，從何時開始怕遙望星塵」</blockquote>
+<p>这两句问的不是"我要怎么逃"，而是"我是从什么时候起变成这样的"。从什么时候起，我开始害怕独处？从什么时候起，仰望星空变成了一件令人不安的事？</p>
+<p>林夕的厉害之处在于，他没有把"害怕离群"归咎于个人的软弱。他指出了一个更残酷的事实：<strong>是这个社会的规训机制，让你害怕的。</strong></p>
+<p>满街赶路的人，生存的压力，房贷的账单，同事的目光。这些不是你想象出来的敌人，它们是真实的力量。你不是不想飞，是飞的代价太高了，高到你不得不重新计算。</p>
+<p>所以林夕没有给出逃离方案。他做的事情更高明——他把<strong>"不自由的情境"</strong>血淋淋地、却又无比温柔地展现在你面前。他不告诉你怎么办，他只是让你<strong>看清楚</strong>。</p>
+<p>而看清楚这件事本身，就已经是自由的第一步了。</p>
+<figure><img src="/academic-site/blog/fc-02-treadmill.png" alt="" loading="lazy" /></figure>
+<h2>跑步机上的老鼠</h2>
+<p>为什么我们会活成这样？</p>
+<p>我最近在备忘录里翻到一段以前写的话，大意是：社会制度的本质，就是让你像一台机器一样不停运转，没有时间进行自我的意义构建。</p>
+<p>想想看。读书，上学，考研考公，上班，买房买车，结婚生子。这是一条被精心设计的流水线。你以为这是你选择的人生？不，这是社会正常运转需要你扮演的角色。</p>
+<p>人生的前二十年，是一场"服从性测试"。老师告诉你什么是对的，考试验证你是否服从。经过二十年的训练，你进入社会，正式成为"体制"的一部分。你可能确实因为学习好而找到了好工作、拿到了高工资、组建了幸福家庭。</p>
+<p><strong>但你真的过上幸福生活了吗？</strong></p>
+<p>我认为不一定。或者说，那种幸福是有条件的、有期限的。因为你的人生不是自己创造的，而是被社会规范替代的。你活在别人的剧本里，演着别人安排的角色。当有一天剧本失效——婚姻出了问题，孩子长大离家，贷款还清了却依然空虚——虚无会再次扑来。而且这一次，比以前更猛烈。</p>
+<p>因为你从来没学过怎么面对它。</p>
+<p>社会不会让你真正面对虚无。它只是温柔地麻醉你。结婚，有人陪你，你就不孤单了。生孩子，让孩子成为你活着的理由。买房，每月还贷，让你觉得自己在前进。考编，有身份有制度替你回答你是谁。</p>
+<p>这些看似答案，其实只是麻醉剂。你不需要直视虚无，你只要按照剧本活下去，就能暂时获得安全感。</p>
+<p><strong>可是那是别人的答案，不是你的。</strong></p>
+<p>《任我行》里的主人公，其实就是一个站在跑步机上的人，突然意识到自己一直在跑，却从来没问过——我跑向哪里？这台跑步机是谁设置的？我能不能按下暂停键？</p>
+<p>这份意识的苏醒，就是林夕说的"惆怅"的来源。</p>
+<figure><img src="/academic-site/blog/fc-03-three-freedoms.png" alt="" loading="lazy" /></figure>
+<h2>三种自由</h2>
+<p>如果绝对的自由不存在——你不可能辞掉所有工作、断绝所有关系、像蝴蝶一样飘在空中——那"自由"到底是什么？</p>
+<p>我的答案是：自由至少有三层。</p>
+<p><strong>第一层：觉察的自由。</strong></p>
+<p>当一个人能意识到自己"被困于桃源"，能反思自己"为何不敢离群"，他已经在精神上迈出了自由的第一步。</p>
+<p>真正的不自由是什么？是身处牢笼而不自知，甚至为之洋洋得意。朋友圈里晒加班的人，觉得"奋斗"是一种美德；背着房贷的人，觉得"稳定"是一种成就。他们不是不自由，而是<strong>连自己不自由这件事都不知道</strong>。</p>
+<p>《任我行》的主人公至少是清醒的。而这份清醒的痛苦——那种午夜梦回时突然涌上来的空虚感——恰恰是自由的萌芽。</p>
+<p><strong>第二层：内心的自由。</strong></p>
+<p>外部环境可以限制你的身体和行为。满街赶路人、生存压力、职称评审——这些都是真实的约束。但它们无法彻底禁锢你的内心。</p>
+<p>歌里那个渴望"还是让自己疯一下要紧"的念头，那份对蝴蝶的"惋惜"，就是内心自由的体现。即使我住在"两厅双套"的安稳里，我的灵魂依然可以向往"天空海阔"。这种向往本身，就是一种无法被剥夺的自由。</p>
+<p>维克多·弗兰克尔在纳粹集中营里写下了那句著名的话："人所拥有的任何东西，都可以被剥夺，唯独人性最后的自由——也就是在任何环境中选择自己态度的自由——不能被剥夺。"</p>
+<p>集中营里的人尚且如此。我们坐在有空调的办公室里，抱怨不自由，是不是有些奢侈？</p>
+<p>但这不是在比惨。弗兰克尔的意思是：<strong>自由不是外部条件，是内部状态。</strong></p>
+<p>你可以在最不自由的环境里，保有最自由的灵魂。前提是你意识到了——意识到那份向往和惆怅，本身就是你灵魂独立的证据。</p>
+<p><strong>第三层：重新定义自由。</strong></p>
+<p>这是我最近才想明白的一层。</p>
+<p>当绝对的"任我行"不可得时，自由是什么？它不是推翻一切的革命，也不是遁入深山的逃离。它是在承担责任的同时，为自己保留一个精神角落。是在循规蹈矩的生活中，允许自己偶尔的出神和不羈。</p>
+<p>这不是妥协。这是在有限的空间里，将自由的价值最大化的智慧。</p>
+<p>2025 年的某个下午，我在跑步的时候突然想到一句话：<strong>任我行，在于能自由选择是闯红灯还是等绿灯。</strong></p>
+<p>自由不是一定要闯红灯。如果你选择等绿灯，但这个"等"是你主动的、清醒的、不是因为恐惧而是因为判断——那你就是自由的。反过来，如果你闯红灯只是为了证明自己"敢"，那这种反叛本身也是一种不自由，因为你被"反叛"这个姿态绑架了。</p>
+<p>真正的自由人，不需要通过任何姿态来证明自己的自由。他只是安静地做出选择，然后承担后果。</p>
+<figure><img src="/academic-site/blog/fc-04-quiet-morning.png" alt="" loading="lazy" /></figure>
+<h2>从跑步机上跳下来</h2>
+<p>说到这里，可能有人会问：道理我都懂，然后呢？</p>
+<p>然后什么也没有。</p>
+<p>我不打算给你一个行动清单，告诉你"第一步做什么，第二步做什么"。因为那样做的本质，是我在替你写另一个剧本。而我刚才花了三千字告诉你，别人的剧本不是你的答案。</p>
+<p>我能说的只是我自己的经验。</p>
+<p>我发现，从跑步机上"跳下来"的契机，往往不是什么惊天动地的顿悟，而是一些非常小的时刻。</p>
+<p>比如某天早晨醒来，没有立刻看手机，而是在阳台上站了五分钟，看天亮。</p>
+<p>比如跑步的时候，不戴耳机，只听自己的呼吸和脚步声。</p>
+<p>比如在开了一个小时毫无意义的会之后，关上办公室门，给自己泡一杯茶，什么都不做地坐十分钟。</p>
+<p>这些时刻没有任何生产力。它们完全是"浪费"。但正是在这些"浪费"里，我听到了一些平时被噪音淹没的声音。那是我自己的声音。</p>
+<p>存在主义从来不给安慰剂。它的答案是残酷的，但真实：<strong>意义不是找到的，是创造的。</strong> 你等不来标准答案，没有哪本书哪个导师会替你解答。你需要自己去搭建属于自己的系统——哪怕这个系统再小，也能抵抗虚无。</p>
+<p>我搭建的系统很简单。在 Obsidian 里写下我的价值观，想清楚什么对我重要、什么不重要。然后在日常生活中，用这套系统去做选择。</p>
+<p>这不是什么宏大的工程。它就是一些很朴素的句子：</p>
+<p>Focus on only three things: my money, my health, and the peace.</p>
+<p>与你无关的事不要掺和。无法改变的事不要纠结。</p>
+<p>不改变，不教育，只筛选。</p>
+<p>这些不是金句。这是我给自己的操作手册。当外界的噪音太大时，我打开这个手册看一眼，就知道该怎么做了。</p>
+<figure><img src="/academic-site/blog/fc-05-roadside.png" alt="" loading="lazy" /></figure>
+<h2>最后一个问题</h2>
+<p>林夕在《任我行》结尾写道：</p>
+<blockquote>「從何時你也學會不要離群，從何時發覺沒有同伴不行」</blockquote>
+<p>我想把这句话反过来问。</p>
+<p>不是"从何时你学会了不要离群"，而是——<strong>你上一次让自己"疯一下"，是什么时候？</strong></p>
+<p>不是指做什么惊世骇俗的事。是那种很小的、只属于你自己的"疯"。</p>
+<p>在不该休息的时候休息了一下。在所有人都在赶路的时候，你停下来看了一会儿天。在应该继续等绿灯的路口，你选择——不是闯红灯，而是干脆坐在路边，哪儿也不去。</p>
+<p>如果你想不起来，也许是时候了。</p>
+<p>不是时候去做什么伟大的事。只是时候去确认一下，在这些枷锁之下，你的灵魂还在不在那里。</p>
+<blockquote>「在枷鎖中依然能夠嚮往飛翔，並在每一次的嚮往中，確認自己靈魂的獨立與高貴。」</blockquote></div> </div> </article> </main> <footer class="py-12 border-t" style="border-color: var(--color-border);"> <div class="max-w-4xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-2"> <p class="text-xs" style="color: var(--color-muted);">
+&copy; 2026 Zylen. All rights reserved.
+</p> <p class="text-xs" style="color: var(--color-muted);">
+Built with <a href="https://astro.build" target="_blank" rel="noopener" class="underline transition-colors duration-300" style="color: var(--color-accent);">Astro</a> </p> </div> </footer> </body></html>
