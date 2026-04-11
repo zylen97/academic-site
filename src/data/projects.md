@@ -7,10 +7,13 @@
 
 | 标题 | 方法 | 期刊 | 身份 | 年份 | DOI | 公开 |
 |------|------|------|------|------|-----|------|
-| Dynamic recovery from disruptions in prefabricated supply chains considering delay effects | 微分博弈 | Automation in Construction | 一作 | 2024 | 10.1016/j.autcon.2024.105923 | ✅ |
-| Too Much of a Good Thing? The Curvilinear Effect of Responsible Leadership on Unethical Pro-Organizational Behavior in Projects | 多元回归 | Project Management Journal | 一作 | 2023 | 10.1177/87569728231216842 | ✅ |
-| Formalization or improvisation: the influence of team mindfulness on team resilience | 多元回归 | Engineering, Construction and Architectural Management | 通讯 | 2023 | 10.1108/ECAM-02-2023-0186 | ✅ |
+| Dynamic recovery from disruptions in prefabricated supply chains considering delay effects | 微分博弈 | Automation in Construction | 一作 | 2026 | 10.1016/j.autcon.2025.106615 | ✅ |
+| Too much of a good thing? The curvilinear effect of responsible leadership on unethical pro-organizational behavior in projects | 多元回归 | Project Management Journal | 一作 | 2025 | 10.1177/87569728251403053 | ✅ |
 | A Differential Game Analysis on Government-Firm Collaboration in Emergency Construction | 微分博弈 | Journal of Management in Engineering | 一作 | 2026 | | ✅ |
+| Exploring environmental collaboration and greenwashing in construction projects: integrative governance framework | 多元回归 | Journal of Construction Engineering and Management | 一作 | 2023 | 10.1061/JCEMD4.COENG-13543 | ✅ |
+| Formalization or improvisation: the influence of team mindfulness on team resilience | 多元回归 | Engineering, Construction and Architectural Management | 通讯 | 2025 | 10.1108/ECAM-09-2024-1227 | ✅ |
+| The dark side of environmental sustainability in projects: unraveling greenwashing behaviors | 多元回归 | Project Management Journal | 除导师外一作 | 2022 | 10.1177/87569728211042705 | ✅ |
+| To be green or not to be: How environmental regulations shape contractor greenwashing behaviors in construction projects | 多元回归 | Sustainable Cities and Society | 除导师外一作 | 2020 | 10.1016/j.scs.2020.102462 | ✅ |
 
 ## 投稿中
 
