@@ -1,10 +1,14 @@
 ---
+const base = '/academic-site';
 const navLinks = [
-  { label: 'Research', href: '#research' },
-  { label: 'Publications', href: '#publications' },
-  { label: 'CV', href: '#cv' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Research', href: `${base}/research/` },
+  { label: 'Publications', href: `${base}/publications/` },
+  { label: 'Life', href: `${base}/life/` },
+  { label: 'Blog', href: `${base}/blog/` },
+  { label: 'CV', href: `${base}/cv/` },
+  { label: 'Contact', href: `${base}/contact/` },
 ];
+const currentPath = Astro.url.pathname;
 ---
 
 <header
@@ -19,15 +23,21 @@ const navLinks = [
 
     <!-- Desktop nav -->
     <div class="hidden md:flex items-center gap-8">
-      {navLinks.map((link) => (
-        <a
-          href={link.href}
-          class="text-sm transition-colors duration-300 hover:opacity-100"
-          style="color: var(--color-text-secondary); opacity: 0.7;"
-        >
-          {link.label}
-        </a>
-      ))}
+      {navLinks.map((link) => {
+        const isActive = currentPath.startsWith(link.href.replace(/\/$/, ''));
+        return (
+          <a
+            href={link.href}
+            class="text-sm transition-colors duration-300"
+            style={isActive
+              ? "color: var(--color-accent); opacity: 1;"
+              : "color: var(--color-text-secondary); opacity: 0.7;"
+            }
+          >
+            {link.label}
+          </a>
+        );
+      })}
       <button
         id="theme-toggle"
         class="w-8 h-8 flex items-center justify-center rounded-lg transition-colors duration-300"

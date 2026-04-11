@@ -1,0 +1,63 @@
+# Life records — edit this file to update the Life page
+
+travel:
+  - title: "Japan Kantou"
+    location: "Tokyo, Japan"
+    date: "2025-08"
+    duration: "5 days"
+    highlights: "Asakusa, Senso-ji, Shinjuku, Shibuya, Ginza"
+    emoji: "🗼"
+
+  - title: "Japan Kansai"
+    location: "Kyoto · Nara · Osaka"
+    date: "2024-10"
+    duration: "8 days"
+    highlights: "Kinkaku-ji, Fushimi Inari, Bamboo Forest, Todai-ji, Osaka Castle"
+    emoji: "⛩️"
+
+  - title: "Brussels · Rotterdam · Amsterdam"
+    location: "Belgium · Netherlands"
+    date: "2023-04"
+    duration: "5 days"
+    highlights: "Rotterdam Marathon, Dutch canals, Belgian waffles"
+    emoji: "🇳🇱"
+
+  - title: "Prague · Vienna · Budapest"
+    location: "Czech · Austria · Hungary"
+    date: "2022-12"
+    duration: "8 days"
+    highlights: "Christmas markets, Danube river, thermal baths"
+    emoji: "🏰"
+
+  - title: "Florence · Vatican · Roma"
+    location: "Italy"
+    date: "2022-11"
+    duration: "5 days"
+    highlights: "Florence Marathon, Uffizi, Colosseum, Vatican, Trevi Fountain"
+    emoji: "🏛️"
+
+  - title: "Verona · Dolomiti · Venezia"
+    location: "Italy"
+    date: "2022-10"
+    duration: "6 days"
+    highlights: "Dolomites hiking, Lago di Braies, Lago di Carezza, Venice"
+    emoji: "🏔️"
+
+  - title: "Lake Como"
+    location: "Italy"
+    date: "2022-10"
+    duration: "Day trip"
+    highlights: "Como, Bellagio, Varenna, ferry ride"
+    emoji: "🚢"
+
+running:
+  - race: "Rotterdam Marathon"
+    location: "Rotterdam, Netherlands"
+    date: "2023-04-16"
+    emoji: "🏃"
+
+  - race: "Florence Marathon"
+    location: "Florence, Italy"
+    date: "2022-11-27"
+    target: "3:15:00"
+    emoji: "🏃"

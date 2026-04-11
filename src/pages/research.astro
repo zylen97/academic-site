@@ -1,0 +1,17 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import ResearchSection from '../components/ResearchSection.astro';
+import Footer from '../components/Footer.astro';
+import { getPublicProjects } from '../lib/parse-projects';
+
+const projects = getPublicProjects();
+---
+
+<BaseLayout title="Research | Zylen">
+  <Header />
+  <main>
+    <ResearchSection projects={projects} />
+  </main>
+  <Footer />
+</BaseLayout>

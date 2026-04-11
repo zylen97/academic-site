@@ -1,0 +1,17 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Publications from '../components/Publications.astro';
+import Footer from '../components/Footer.astro';
+import { getPublicProjects } from '../lib/parse-projects';
+
+const projects = getPublicProjects();
+---
+
+<BaseLayout title="Publications | Zylen">
+  <Header />
+  <main>
+    <Publications papers={projects.published} />
+  </main>
+  <Footer />
+</BaseLayout>

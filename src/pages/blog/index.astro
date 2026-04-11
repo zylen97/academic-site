@@ -1,0 +1,17 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import BlogList from '../../components/BlogList.astro';
+import Footer from '../../components/Footer.astro';
+import { getBlogPosts } from '../../lib/parse-blog';
+
+const posts = getBlogPosts();
+---
+
+<BaseLayout title="Blog | Zylen">
+  <Header />
+  <main>
+    <BlogList posts={posts} />
+  </main>
+  <Footer />
+</BaseLayout>

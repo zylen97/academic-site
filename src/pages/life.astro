@@ -1,14 +1,17 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
-import Hero from '../components/Hero.astro';
+import LifeSection from '../components/LifeSection.astro';
 import Footer from '../components/Footer.astro';
+import { getLifeData } from '../lib/parse-life';
+
+const lifeData = getLifeData();
 ---
 
-<BaseLayout>
+<BaseLayout title="Life | Zylen">
   <Header />
   <main>
-    <Hero />
+    <LifeSection data={lifeData} />
   </main>
   <Footer />
 </BaseLayout>

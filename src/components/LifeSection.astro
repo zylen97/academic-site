@@ -1,0 +1,90 @@
+---
+import type { LifeData } from '../lib/parse-life';
+
+interface Props {
+  data: LifeData;
+}
+
+const { data } = Astro.props;
+---
+
+<section class="py-24">
+  <div class="max-w-4xl mx-auto px-6">
+    <!-- Travel -->
+    <div class="flex items-center gap-4 mb-16">
+      <div class="w-1.5 h-1.5 rounded-full" style="background: var(--color-accent);" />
+      <h2 class="text-2xl font-semibold" style="color: var(--color-text);">
+        Travel
+      </h2>
+      <div class="flex-1 h-px" style="background: var(--color-border);" />
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-20">
+      {data.travel.map((trip) => (
+        <div
+          class="group rounded-2xl p-6 transition-all duration-300 hover:-translate-y-0.5"
+          style="background: var(--color-surface); border: 1px solid var(--color-border);"
+        >
+          <div class="flex items-start gap-4">
+            <span class="text-2xl shrink-0 mt-0.5">{trip.emoji}</span>
+            <div class="min-w-0">
+              <div class="flex items-baseline justify-between gap-2">
+                <h3 class="text-sm font-semibold truncate" style="color: var(--color-text);">
+                  {trip.title}
+                </h3>
+                <span class="text-xs shrink-0" style="color: var(--color-muted);">
+                  {trip.date}
+                </span>
+              </div>
+              <p class="mt-1 text-xs" style="color: var(--color-accent);">
+                {trip.location}
+                <span style="color: var(--color-muted);"> · {trip.duration}</span>
+              </p>
+              <p class="mt-2 text-xs leading-relaxed" style="color: var(--color-text-secondary);">
+                {trip.highlights}
+              </p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Running -->
+    <div class="flex items-center gap-4 mb-16">
+      <div class="w-1.5 h-1.5 rounded-full" style="background: var(--color-accent);" />
+      <h2 class="text-2xl font-semibold" style="color: var(--color-text);">
+        Running
+      </h2>
+      <div class="flex-1 h-px" style="background: var(--color-border);" />
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      {data.running.map((race) => (
+        <div
+          class="group rounded-2xl p-6 transition-all duration-300 hover:-translate-y-0.5"
+          style="background: var(--color-surface); border: 1px solid var(--color-border);"
+        >
+          <div class="flex items-center gap-4">
+            <span class="text-2xl">{race.emoji}</span>
+            <div>
+              <h3 class="text-sm font-semibold" style="color: var(--color-text);">
+                {race.race}
+              </h3>
+              <p class="mt-1 text-xs" style="color: var(--color-muted);">
+                {race.location} · {race.date}
+                {race.target && <span> · Target {race.target}</span>}
+              </p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .group:hover {
+    border-color: var(--color-accent) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06) !important;
+  }
+</style>
