@@ -9,8 +9,7 @@ const { papers } = Astro.props;
 ---
 
 <section id="publications" class="py-24">
-  <div class="max-w-4xl mx-auto px-6">
-    <!-- Section heading -->
+  <div class="max-w-5xl mx-auto px-6">
     <div class="flex items-center gap-4 mb-16">
       <div class="w-1.5 h-1.5 rounded-full" style="background: var(--color-accent);" />
       <h2 class="text-2xl font-semibold" style="color: var(--color-text);">
@@ -19,28 +18,47 @@ const { papers } = Astro.props;
       <div class="flex-1 h-px" style="background: var(--color-border);" />
     </div>
 
-    <ol class="space-y-6" reversed>
-      {papers.map((paper, i) => (
-        <li class="flex gap-4">
-          <span
-            class="shrink-0 w-6 h-6 flex items-center justify-center rounded-full text-xs font-medium mt-0.5"
-            style="background: var(--color-surface); color: var(--color-accent); border: 1px solid var(--color-border);"
-          >
-            {papers.length - i}
-          </span>
-          <div>
-            <p class="text-sm font-medium leading-relaxed" style="color: var(--color-text);">
-              {paper.title}
-            </p>
-            <p class="mt-1 text-xs" style="color: var(--color-muted);">
-              <span style="color: var(--color-accent);">{paper.journal}</span>
-              {paper.year && <span> · {paper.year}</span>}
-              <span> · {paper.role === '一作' ? 'First Author' : 'Corresponding Author'}</span>
-              <span> · {paper.method}</span>
-            </p>
-          </div>
-        </li>
-      ))}
-    </ol>
+    <div class="overflow-x-auto rounded-xl" style="border: 1px solid var(--color-border);">
+      <table class="pub-table w-full text-sm">
+        <thead>
+          <tr style="background: var(--color-surface);">
+            <th class="px-4 py-3 text-left font-medium w-8" style="color: var(--color-muted);">#</th>
+            <th class="px-4 py-3 text-left font-medium" style="color: var(--color-muted);">Title</th>
+            <th class="px-4 py-3 text-left font-medium whitespace-nowrap" style="color: var(--color-muted);">Method</th>
+            <th class="px-4 py-3 text-left font-medium whitespace-nowrap" style="color: var(--color-muted);">Journal</th>
+            <th class="px-4 py-3 text-center font-medium w-16" style="color: var(--color-muted);">Year</th>
+            <th class="px-4 py-3 text-center font-medium w-20" style="color: var(--color-muted);">Role</th>
+          </tr>
+        </thead>
+        <tbody>
+          {papers.map((paper, i) => {
+            const roleLabel = paper.role === '一作' ? 'First' : 'Corr.';
+            const roleColor = paper.role === '一作' ? 'var(--color-accent)' : 'var(--color-accent-secondary)';
+            return (
+              <tr class="border-t transition-colors duration-200" style="border-color: var(--color-border);">
+                <td class="px-4 py-3.5 tabular-nums" style="color: var(--color-muted);">{papers.length - i}</td>
+                <td class="px-4 py-3.5 leading-relaxed" style="color: var(--color-text);">{paper.title}</td>
+                <td class="px-4 py-3.5 whitespace-nowrap">
+                  <span class="inline-block px-2 py-0.5 text-xs rounded-full" style="background: var(--color-accent); color: white; opacity: 0.85;">
+                    {paper.method}
+                  </span>
+                </td>
+                <td class="px-4 py-3.5 whitespace-nowrap text-xs" style="color: var(--color-muted);">{paper.journal}</td>
+                <td class="px-4 py-3.5 text-center tabular-nums" style="color: var(--color-muted);">{paper.year}</td>
+                <td class="px-4 py-3.5 text-center">
+                  <span class="text-xs font-medium" style={`color: ${roleColor};`}>{roleLabel}</span>
+                </td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    </div>
   </div>
 </section>
+
+<style>
+  .pub-table tr:hover {
+    background: var(--color-surface);
+  }
+</style>
