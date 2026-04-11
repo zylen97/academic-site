@@ -10,12 +10,12 @@
 | Dynamic recovery from disruptions in prefabricated supply chains considering delay effects | 微分博弈 | Automation in Construction | 一作 | 2024 | 10.1016/j.autcon.2024.105923 | ✅ |
 | Too Much of a Good Thing? The Curvilinear Effect of Responsible Leadership on Unethical Pro-Organizational Behavior in Projects | 多元回归 | Project Management Journal | 一作 | 2023 | 10.1177/87569728231216842 | ✅ |
 | Formalization or improvisation: the influence of team mindfulness on team resilience | 多元回归 | Engineering, Construction and Architectural Management | 通讯 | 2023 | 10.1108/ECAM-02-2023-0186 | ✅ |
+| A Differential Game Analysis on Government-Firm Collaboration in Emergency Construction | 微分博弈 | Journal of Management in Engineering | 一作 | 2026 | | ✅ |
 
 ## 投稿中
 
 | 标题 | 方法 | 目标期刊 | 身份 | 公开 |
 |------|------|---------|------|------|
-| A Differential Game Analysis on Government-Firm Collaboration in Emergency Construction | 微分博弈 | Journal of Management in Engineering | 一作 | ✅ |
 | A Comparative Study of Substantive and Symbolic Environmental Information Disclosure in Construction Firms | 多元回归 | Engineering Construction and Architectural Management | 一作 | ✅ |
 | Research on Digital Transformation and Carbon Emission Reduction Strategies of Construction Firms based on Differential Games | 微分博弈 | Journal of Construction Engineering and Management | 通讯 | ✅ |
 | Unraveling Sustainable Competitive Advantage and Resilience of Construction Enterprises | 组态分析 | Journal of Construction Engineering and Management | 一作 | ✅ |
