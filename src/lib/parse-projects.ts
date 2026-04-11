@@ -5,8 +5,9 @@ export interface Project {
   title: string;
   method: string;
   journal: string;
-  role: '一作' | '通讯';
+  role: '一作' | '除导师外一作' | '通讯';
   year?: number;
+  doi?: string;
   isPublic: boolean;
   status: 'published' | 'under-review' | 'in-progress';
 }
@@ -97,6 +98,9 @@ export function parseProjects(): ProjectGroups {
     if (record['年份']) {
       project.year = parseInt(record['年份'], 10);
     }
+    if (record['DOI']) {
+      project.doi = record['DOI'];
+    }
 
     // Group
     switch (currentStatus) {
@@ -115,12 +119,23 @@ export function parseProjects(): ProjectGroups {
   return groups;
 }
 
-/** Get only public projects */
+/** Sort by role (一作 → 通讯 → 除导师外一作), then year descending */
+function sortProjects(projects: Project[]): Project[] {
+  const rolePriority: Record<string, number> = { '一作': 0, '通讯': 1, '除导师外一作': 2 };
+  return [...projects].sort((a, b) => {
+    const ra = rolePriority[a.role] ?? 9;
+    const rb = rolePriority[b.role] ?? 9;
+    if (ra !== rb) return ra - rb;
+    return (b.year ?? 0) - (a.year ?? 0);
+  });
+}
+
+/** Get only public projects, sorted */
 export function getPublicProjects(): ProjectGroups {
   const all = parseProjects();
   return {
-    published: all.published.filter((p) => p.isPublic),
-    underReview: all.underReview.filter((p) => p.isPublic),
-    inProgress: all.inProgress.filter((p) => p.isPublic),
+    published: sortProjects(all.published.filter((p) => p.isPublic)),
+    underReview: sortProjects(all.underReview.filter((p) => p.isPublic)),
+    inProgress: sortProjects(all.inProgress.filter((p) => p.isPublic)),
   };
 }

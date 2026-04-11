@@ -5,11 +5,11 @@
 
 ## 已发表
 
-| 标题 | 方法 | 期刊 | 身份 | 年份 | 公开 |
-|------|------|------|------|------|------|
-| Dynamic recovery from disruptions in prefabricated supply chains considering delay effects | 微分博弈 | Automation in Construction | 一作 | 2024 | ✅ |
-| Too Much of a Good Thing? The Curvilinear Effect of Responsible Leadership on Unethical Pro-Organizational Behavior in Projects | 多元回归 | Project Management Journal | 一作 | 2023 | ✅ |
-| Formalization or improvisation: the influence of team mindfulness on team resilience | 多元回归 | Engineering, Construction and Architectural Management | 通讯 | 2023 | ✅ |
+| 标题 | 方法 | 期刊 | 身份 | 年份 | DOI | 公开 |
+|------|------|------|------|------|-----|------|
+| Dynamic recovery from disruptions in prefabricated supply chains considering delay effects | 微分博弈 | Automation in Construction | 一作 | 2024 | 10.1016/j.autcon.2024.105923 | ✅ |
+| Too Much of a Good Thing? The Curvilinear Effect of Responsible Leadership on Unethical Pro-Organizational Behavior in Projects | 多元回归 | Project Management Journal | 一作 | 2023 | 10.1177/87569728231216842 | ✅ |
+| Formalization or improvisation: the influence of team mindfulness on team resilience | 多元回归 | Engineering, Construction and Architectural Management | 通讯 | 2023 | 10.1108/ECAM-02-2023-0186 | ✅ |
 
 ## 投稿中
 

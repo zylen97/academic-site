@@ -55,8 +55,8 @@ const sections = [
               <tbody>
                 {section.items.map((project) => {
                   counter++;
-                  const roleLabel = project.role === '一作' ? 'First' : 'Corr.';
-                  const roleColor = project.role === '一作' ? 'var(--color-accent)' : 'var(--color-accent-secondary)';
+                  const roleLabel = project.role === '一作' ? 'First' : project.role === '通讯' ? 'Corr.' : 'Second';
+                  const roleColor = project.role === '一作' ? 'var(--color-accent)' : project.role === '通讯' ? 'var(--color-accent-secondary)' : 'var(--color-muted)';
                   return (
                     <tr class="border-t transition-colors duration-200" style="border-color: var(--color-border);">
                       <td class="px-4 py-3.5 tabular-nums" style="color: var(--color-muted);">{counter}</td>
