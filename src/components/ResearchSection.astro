@@ -8,7 +8,6 @@ interface Props {
 const { projects } = Astro.props;
 
 const sections = [
-  { key: 'published' as const, title: 'Published', subtitle: '已发表', items: projects.published },
   { key: 'underReview' as const, title: 'Under Review', subtitle: '投稿中', items: projects.underReview },
   { key: 'inProgress' as const, title: 'In Progress', subtitle: '撰写中', items: projects.inProgress },
 ].filter((s) => s.items.length > 0);
@@ -19,13 +18,12 @@ const sections = [
     <div class="flex items-center gap-4 mb-16">
       <div class="w-1.5 h-1.5 rounded-full" style="background: var(--color-accent);" />
       <h2 class="text-2xl font-semibold" style="color: var(--color-text);">
-        Research Projects
+        Working Papers
       </h2>
       <div class="flex-1 h-px" style="background: var(--color-border);" />
     </div>
 
     {sections.map((section) => {
-      const showYear = section.key === 'published';
       let counter = 0;
       return (
         <div class="mb-14 last:mb-0">
@@ -45,10 +43,7 @@ const sections = [
                   <th class="px-4 py-3 text-left font-medium w-8" style="color: var(--color-muted);">#</th>
                   <th class="px-4 py-3 text-left font-medium" style="color: var(--color-muted);">Title</th>
                   <th class="px-4 py-3 text-left font-medium whitespace-nowrap" style="color: var(--color-muted);">Method</th>
-                  <th class="px-4 py-3 text-left font-medium whitespace-nowrap" style="color: var(--color-muted);">
-                    {showYear ? 'Journal' : 'Target Journal'}
-                  </th>
-                  {showYear && <th class="px-4 py-3 text-center font-medium w-16" style="color: var(--color-muted);">Year</th>}
+                  <th class="px-4 py-3 text-left font-medium whitespace-nowrap" style="color: var(--color-muted);">Target Journal</th>
                   <th class="px-4 py-3 text-center font-medium w-20" style="color: var(--color-muted);">Role</th>
                 </tr>
               </thead>
@@ -67,7 +62,6 @@ const sections = [
                         </span>
                       </td>
                       <td class="px-4 py-3.5 whitespace-nowrap text-xs" style="color: var(--color-muted);">{project.journal}</td>
-                      {showYear && <td class="px-4 py-3.5 text-center tabular-nums" style="color: var(--color-muted);">{project.year}</td>}
                       <td class="px-4 py-3.5 text-center">
                         <span class="text-xs font-medium" style={`color: ${roleColor};`}>{roleLabel}</span>
                       </td>
