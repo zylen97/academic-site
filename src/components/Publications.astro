@@ -38,7 +38,7 @@ const { papers } = Astro.props;
             const doiUrl = paper.doi ? (paper.doi.startsWith('http') ? paper.doi : `https://doi.org/${paper.doi}`) : null;
             return (
               <tr class="border-t transition-colors duration-200" style="border-color: var(--color-border);">
-                <td class="px-4 py-3.5 tabular-nums" style="color: var(--color-muted);">{papers.length - i}</td>
+                <td class="px-4 py-3.5 tabular-nums" style="color: var(--color-muted);">{i + 1}</td>
                 <td class="px-4 py-3.5 leading-relaxed" style="color: var(--color-text);">{paper.title}</td>
                 <td class="px-4 py-3.5 whitespace-nowrap">
                   <span class="inline-block px-2 py-0.5 text-xs rounded-full" style="background: var(--color-accent); color: white; opacity: 0.85;">

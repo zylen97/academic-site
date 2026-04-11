@@ -25,10 +25,9 @@ const STATUS_MAP: Record<string, Project['status']> = {
 };
 
 function parseTableRow(row: string): string[] {
-  return row
-    .split('|')
-    .map((cell) => cell.trim())
-    .filter((cell) => cell !== '');
+  const cells = row.split('|').map((cell) => cell.trim());
+  // Remove leading/trailing empty strings from | delimiters, but keep inner empty cells
+  return cells.slice(1, -1);
 }
 
 function isSeparatorRow(row: string): boolean {
