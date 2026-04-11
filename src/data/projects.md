@@ -24,6 +24,7 @@
 | Unraveling Sustainable Competitive Advantage and Resilience of Construction Enterprises | 组态分析 | Journal of Construction Engineering and Management | 一作 | ✅ |
 | Towards sustainability transitions: projects as drivers of ESG integration in project-based firms | 案例研究 | International Journal of Project Management | 通讯 | ✅ |
 | How External Regulations Influence ESG Integration in Construction Firms | 多元回归 | Journal of Management in Engineering | 通讯 | ✅ |
+| How digital communication tool use shapes improvisation capability in large-scale projects through meta-knowledge | 多元回归 | International Journal of Project Management | 一作 | ✅ |
 
 ## 撰写中
 
@@ -36,7 +37,6 @@
 | 保障性住房大数据分析 | 多元回归 | Sustainable Cities and Society | 一作 | ❌ |
 | 项目团队结构虚拟性影响感知虚拟性 | 多元回归 | Project Management Journal | 通讯 | ❌ |
 | 横纵向政府间应急协同演化博弈 | 演化博弈 | Sustainable Cities and Society | 一作 | ❌ |
-| 数字化工具如何影响项目团队成员即兴能力 | 多元回归 | International Journal of Project Management | 一作 | ❌ |
 | 项目团队成员组织间交流 | 组态分析 | Journal of Management in Engineering | 一作 | ❌ |
 | 溯源技术影响供应链漂绿 | Stackelberg博弈 | Automation in Construction | 一作 | ❌ |
 | 企业创新绩效评价DEA+shapley值 | 数据包络分析 | Technovation | 一作 | ❌ |

@@ -2,28 +2,28 @@
 
 /* Claude.ai-inspired warm palette */
 @theme {
-  --color-bg: #E8E6DC;
-  --color-surface: #FAF9F0;
-  --color-text: #141413;
-  --color-text-secondary: #30302E;
-  --color-muted: #87867F;
-  --color-accent: #D97757;
-  --color-accent-hover: #C4654A;
+  --color-bg: #F4F3EE;
+  --color-surface: #FAFAF8;
+  --color-text: #191918;
+  --color-text-secondary: #4A4A47;
+  --color-muted: #9A998F;
+  --color-accent: #C9714E;
+  --color-accent-hover: #B8654A;
   --color-accent-secondary: #EDA100;
-  --color-border: rgba(135, 134, 127, 0.2);
+  --color-border: rgba(180, 178, 170, 0.15);
 }
 
 /* Dark mode overrides */
 .dark {
-  --color-bg: #1A1A18;
-  --color-surface: #242422;
-  --color-text: #E8E6DC;
+  --color-bg: #1E1E1C;
+  --color-surface: #2A2A27;
+  --color-text: #EDECE6;
   --color-text-secondary: #B8B7B0;
   --color-muted: #6B6A64;
-  --color-accent: #E8956F;
-  --color-accent-hover: #F0A882;
+  --color-accent: #D9886A;
+  --color-accent-hover: #E09B7A;
   --color-accent-secondary: #F5BB33;
-  --color-border: rgba(107, 106, 100, 0.3);
+  --color-border: rgba(122, 121, 114, 0.25);
 }
 
 /* Base styles */

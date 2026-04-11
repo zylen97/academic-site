@@ -13,7 +13,7 @@ const currentPath = Astro.url.pathname;
 
 <header
   class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md"
-  style="background-color: rgba(232, 230, 220, 0.8);"
+  style="background-color: rgba(244, 243, 238, 0.8);"
 >
   <div class="dark-header-bg" />
   <nav class="max-w-4xl mx-auto px-6 py-4 flex items-center justify-between">
@@ -102,8 +102,8 @@ const currentPath = Astro.url.pathname;
     const header = document.querySelector('header');
     if (header) {
       header.style.backgroundColor = isDark
-        ? 'rgba(26, 26, 24, 0.8)'
-        : 'rgba(232, 230, 220, 0.8)';
+        ? 'rgba(30, 30, 28, 0.8)'
+        : 'rgba(244, 243, 238, 0.8)';
     }
   }
 
@@ -111,7 +111,7 @@ const currentPath = Astro.url.pathname;
   (function() {
     const header = document.querySelector('header');
     if (header && document.documentElement.classList.contains('dark')) {
-      header.style.backgroundColor = 'rgba(26, 26, 24, 0.8)';
+      header.style.backgroundColor = 'rgba(30, 30, 28, 0.8)';
     }
   })();
 
