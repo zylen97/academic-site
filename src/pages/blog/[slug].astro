@@ -34,6 +34,11 @@ function mdToHtml(md: string): string {
         const items = trimmed.split('\n').filter(l => l.startsWith('- ')).map(l => `<li>${inlineFormat(l.slice(2))}</li>`).join('');
         return `<ul>${items}</ul>`;
       }
+      // Image
+      if (trimmed.match(/^!\[.*?\]\(.+?\)$/)) {
+        const match = trimmed.match(/^!\[(.*?)\]\((.+?)\)$/);
+        if (match) return `<figure><img src="${match[2]}" alt="${match[1]}" loading="lazy" />${match[1] ? `<figcaption>${match[1]}</figcaption>` : ''}</figure>`;
+      }
       // Paragraph
       return `<p>${inlineFormat(trimmed.replace(/\n/g, ' '))}</p>`;
     })
@@ -153,6 +158,21 @@ const htmlContent = mdToHtml(post.content);
     border-radius: 0.25rem;
     background: var(--color-surface);
     color: var(--color-accent);
+  }
+  .prose figure {
+    margin: 2rem 0;
+    text-align: center;
+  }
+  .prose figure img {
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  }
+  .prose figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    color: var(--color-muted);
+    font-style: italic;
   }
   .prose strong {
     font-weight: 600;

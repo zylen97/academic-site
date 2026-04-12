@@ -1,22 +1,26 @@
 # CV data — edit this file to update your CV section
-education:
-  - institution: "XX University"
-    degree: "Ph.D. in Management Science and Engineering"
-    period: "20XX — Present"
-    description: "Research focus: construction project management, supply chain optimization"
-
-  - institution: "XX University"
-    degree: "M.S. in Management Science and Engineering"
-    period: "20XX — 20XX"
-    description: ""
-
-  - institution: "XX University"
-    degree: "B.S. in Engineering Management"
-    period: "20XX — 20XX"
-    description: ""
-
 experience:
-  - organization: "XX University"
-    role: "Lecturer / Assistant Professor"
-    period: "20XX — Present"
+  - organization: "Suzhou University of Science and Technology"
+    role: "Lecturer, Department of Engineering Management"
+    period: "2025.1 — Present"
+    description: "School of Civil Engineering"
+    logo: "/academic-site/logos/usts.png"
+
+education:
+  - institution: "Tongji University"
+    degree: "Ph.D. in Management Science and Engineering"
+    period: "2019.9 — 2024.10"
+    description: "Advisor: Prof. Qinghua He"
+    logo: "/academic-site/logos/tongji.png"
+
+  - institution: "Politecnico di Milano"
+    degree: "Joint Ph.D. in Industrial Engineering and Management"
+    period: "2022.9 — 2023.9"
+    description: "Advisor: Prof. Giorgio Locatelli"
+    logo: "/academic-site/logos/polimi.png"
+
+  - institution: "Chongqing University"
+    degree: "B.S. in Engineering Cost Management"
+    period: "2015.9 — 2019.6"
     description: ""
+    logo: "/academic-site/logos/cqu.png"

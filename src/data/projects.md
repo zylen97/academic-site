@@ -13,7 +13,7 @@
 | Exploring environmental collaboration and greenwashing in construction projects: integrative governance framework | 多元回归 | Journal of Construction Engineering and Management | 一作 | 2023 | 10.1061/JCEMD4.COENG-13543 | ✅ |
 | Formalization or improvisation: the influence of team mindfulness on team resilience | 多元回归 | Engineering, Construction and Architectural Management | 通讯 | 2025 | 10.1108/ECAM-09-2024-1227 | ✅ |
 | The dark side of environmental sustainability in projects: unraveling greenwashing behaviors | 多元回归 | Project Management Journal | 除导师外一作 | 2022 | 10.1177/87569728211042705 | ✅ |
-| To be green or not to be: How environmental regulations shape contractor greenwashing behaviors in construction projects | 多元回归 | Sustainable Cities and Society | 除导师外一作 | 2020 | 10.1016/j.scs.2020.102462 | ✅ |
+| To be green or not to be: How environmental regulations shape contractor greenwashing behaviors in construction projects | 信号博弈 | Sustainable Cities and Society | 除导师外一作 | 2020 | 10.1016/j.scs.2020.102462 | ✅ |
 
 ## 投稿中
 

@@ -1,0 +1,13 @@
+- name: Twitter Bookmark Exporter
+  slug: twitter-bookmark-exporter
+  description: Export all your Twitter/X bookmarks via Chrome DevTools Protocol. Zero dependencies, no API keys.
+  repo: https://github.com/zylen97/twitter-bookmark-exporter
+  tags: [Node.js, CDP, CLI]
+  featured: true
+
+- name: Idea Scout
+  slug: idea-scout
+  description: Academic paper discovery and tracking system with daily email digests from FT50/UTD24, CE/PM, and CNKI journals.
+  repo: https://github.com/zylen97/idea-scout
+  tags: [Flutter, Web, OpenAlex]
+  featured: true

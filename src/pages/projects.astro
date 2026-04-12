@@ -1,0 +1,55 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import CodingProjectCard from '../components/CodingProjectCard.astro';
+import { getCodingProjects } from '../lib/parse-coding-projects';
+
+const allProjects = getCodingProjects();
+const featured = allProjects.filter((p) => p.featured);
+const others = allProjects.filter((p) => !p.featured);
+---
+
+<BaseLayout title="Projects | Zylen">
+  <Header />
+  <main class="max-w-4xl mx-auto px-6 py-16">
+    <!-- Page title -->
+    <div class="mb-12">
+      <h1 class="text-3xl font-bold mb-3" style="color: var(--color-text);">
+        Projects
+      </h1>
+      <p class="text-base" style="color: var(--color-text-secondary);">
+        Open-source tools and side projects.
+      </p>
+    </div>
+
+    <!-- Featured projects -->
+    {featured.length > 0 && (
+      <section class="mb-12">
+        <h2 class="text-sm font-semibold uppercase tracking-wider mb-6" style="color: var(--color-muted);">
+          Featured
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          {featured.map((project) => (
+            <CodingProjectCard project={project} />
+          ))}
+        </div>
+      </section>
+    )}
+
+    <!-- Other projects -->
+    {others.length > 0 && (
+      <section>
+        <h2 class="text-sm font-semibold uppercase tracking-wider mb-6" style="color: var(--color-muted);">
+          More
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          {others.map((project) => (
+            <CodingProjectCard project={project} />
+          ))}
+        </div>
+      </section>
+    )}
+  </main>
+  <Footer />
+</BaseLayout>

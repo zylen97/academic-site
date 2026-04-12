@@ -48,22 +48,50 @@ interface TimelineEntry {
   subtitle: string;
   period: string;
   description?: string;
+  logo?: string;
 }
 
-const entries: TimelineEntry[] = [
-  ...(cv.experience || []).map((e: any) => ({
-    title: e.organization || '',
-    subtitle: e.role || '',
-    period: e.period || '',
-    description: e.description || '',
-  })),
-  ...(cv.education || []).map((e: any) => ({
-    title: e.institution || '',
-    subtitle: e.degree || '',
-    period: e.period || '',
-    description: e.description || '',
-  })),
-];
+const experienceEntries: TimelineEntry[] = (cv.experience || []).map((e: any) => ({
+  title: e.organization || '',
+  subtitle: e.role || '',
+  period: e.period || '',
+  description: e.description || '',
+  logo: e.logo || '',
+}));
+
+const educationEntries: TimelineEntry[] = (cv.education || []).map((e: any) => ({
+  title: e.institution || '',
+  subtitle: e.degree || '',
+  period: e.period || '',
+  description: e.description || '',
+  logo: e.logo || '',
+}));
+
+const grantEntries: TimelineEntry[] = (cv.grants || []).map((e: any) => ({
+  title: e.title || '',
+  subtitle: e.role ? `${e.role} · ${e.number || ''}` : '',
+  period: '',
+  description: e.description || '',
+}));
+
+const awardEntries: TimelineEntry[] = (cv.awards || []).map((e: any) => ({
+  title: e.title || '',
+  subtitle: e.organization || '',
+  period: e.year || '',
+  description: e.description || '',
+}));
+
+interface CVSection {
+  heading: string;
+  entries: TimelineEntry[];
+}
+
+const sections: CVSection[] = [
+  { heading: 'Experience', entries: experienceEntries },
+  { heading: 'Education', entries: educationEntries },
+  { heading: 'Research Grants', entries: grantEntries },
+  { heading: 'Awards', entries: awardEntries },
+].filter(s => s.entries.length > 0);
 ---
 
 <section id="cv" class="py-24">
@@ -77,40 +105,78 @@ const entries: TimelineEntry[] = [
       <div class="flex-1 h-px" style="background: var(--color-border);" />
     </div>
 
-    <!-- Timeline -->
-    <div class="relative pl-8">
-      <!-- Vertical line -->
-      <div
-        class="absolute left-3 top-1 bottom-1 w-px"
-        style="background: var(--color-border);"
-      />
+    {sections.map((section) => (
+      <div class="mb-16 last:mb-0">
+        <h3 class="text-xs font-semibold uppercase tracking-widest mb-8" style="color: var(--color-muted);">
+          {section.heading}
+        </h3>
 
-      {entries.map((entry, i) => (
-        <div class="relative mb-10 last:mb-0">
-          <!-- Dot -->
+        <div class="relative pl-8">
           <div
-            class="absolute -left-5 top-1.5 w-2.5 h-2.5 rounded-full"
-            style={`background: ${i === 0 ? 'var(--color-accent)' : 'var(--color-muted)'};`}
+            class="absolute left-3 top-1 bottom-1 w-px"
+            style="background: var(--color-border);"
           />
 
-          <div>
-            <span class="text-xs font-medium" style="color: var(--color-accent);">
-              {entry.period}
-            </span>
-            <h3 class="mt-1 text-sm font-semibold" style="color: var(--color-text);">
-              {entry.title}
-            </h3>
-            <p class="text-sm" style="color: var(--color-text-secondary);">
-              {entry.subtitle}
-            </p>
-            {entry.description && (
-              <p class="mt-1 text-xs" style="color: var(--color-muted);">
-                {entry.description}
-              </p>
-            )}
-          </div>
+          {section.entries.map((entry, i) => (
+            <div class="relative mb-10 last:mb-0 flex items-start justify-between gap-6">
+              <div
+                class="absolute -left-5 top-1.5 w-2.5 h-2.5 rounded-full"
+                style={`background: ${i === 0 ? 'var(--color-accent)' : 'var(--color-muted)'};`}
+              />
+
+              <div class="flex-1">
+                {entry.period && (
+                  <span class="text-xs font-medium" style="color: var(--color-accent);">
+                    {entry.period}
+                  </span>
+                )}
+                <h3 class="mt-1 text-sm font-semibold" style="color: var(--color-text);">
+                  {entry.title}
+                </h3>
+                <p class="text-sm" style="color: var(--color-text-secondary);">
+                  {entry.subtitle}
+                </p>
+                {entry.description && (
+                  <p class="mt-1 text-xs" style="color: var(--color-muted);">
+                    {entry.description}
+                  </p>
+                )}
+              </div>
+
+              {entry.logo && (
+                <img
+                  src={entry.logo}
+                  alt=""
+                  class="cv-logo"
+                  loading="lazy"
+                />
+              )}
+            </div>
+          ))}
         </div>
-      ))}
-    </div>
+      </div>
+    ))}
   </div>
 </section>
+
+<style>
+  .cv-logo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    flex-shrink: 0;
+    opacity: 0.7;
+    filter: grayscale(100%);
+    transition: opacity 0.3s, filter 0.3s;
+  }
+  .cv-logo:hover {
+    opacity: 1;
+    filter: grayscale(0%);
+  }
+  :global(.dark) .cv-logo {
+    filter: grayscale(100%) brightness(0.8) invert(1);
+  }
+  :global(.dark) .cv-logo:hover {
+    filter: grayscale(0%) brightness(1);
+  }
+</style>
