@@ -1,13 +1,21 @@
+- name: Idea Scout
+  slug: idea-scout
+  description: "Full-stack academic paper radar: scans 80 journals daily (FT50, CE/PM, CNKI), translates abstracts via LLM, sends email digests, and serves a Flutter PWA for browsing and selecting papers."
+  repo: https://github.com/zylen97/idea-scout
+  demo: https://zylen97.github.io/idea-scout/
+  tags: [Flutter, Python, OpenAlex, LLM]
+  featured: true
+
+- name: Claude Academic OS
+  slug: claude-academic-os
+  description: "A personal academic operating system built on Claude Code — 38 skills, 7 agents, covering the full research lifecycle from literature intelligence to knowledge dissemination."
+  repo: https://github.com/zylen97/claude-academic-os
+  tags: [Claude Code, AI, Research Workflow]
+  featured: true
+
 - name: Twitter Bookmark Exporter
   slug: twitter-bookmark-exporter
   description: Export all your Twitter/X bookmarks via Chrome DevTools Protocol. Zero dependencies, no API keys.
   repo: https://github.com/zylen97/twitter-bookmark-exporter
   tags: [Node.js, CDP, CLI]
-  featured: true
-
-- name: Idea Scout
-  slug: idea-scout
-  description: Academic paper discovery and tracking system with daily email digests from FT50/UTD24, CE/PM, and CNKI journals.
-  repo: https://github.com/zylen97/idea-scout
-  tags: [Flutter, Web, OpenAlex]
   featured: true
