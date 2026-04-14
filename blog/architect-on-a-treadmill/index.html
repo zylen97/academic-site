@@ -1,0 +1,114 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Academic researcher portfolio — research projects, publications, and CV."><link rel="icon" type="image/svg+xml" href="/academic-site/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"><title>跑步机上的架构师：当 Claude 崩溃那一刻，我心慌出汗 | Zylen</title><!-- Dark mode: read preference before paint to prevent flash --><script>
+      (function () {
+        const saved = localStorage.getItem('theme');
+        if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script><link rel="stylesheet" href="/academic-site/_astro/Footer.D0xGtMFP.css">
+<style>.category-badge[data-astro-cid-4sn4zg3r]{font-size:.65rem;padding:.15rem .5rem;border-radius:999px;font-weight:500;letter-spacing:.02em}.category-sunset[data-astro-cid-4sn4zg3r]{background:#c9714e1a;color:var(--color-accent)}.category-lyrics[data-astro-cid-4sn4zg3r]{background:#5b9a8b1f;color:#5b9a8b}.category-research[data-astro-cid-4sn4zg3r]{background:#6b8aa11f;color:#6b8aa1}.dark .category-sunset[data-astro-cid-4sn4zg3r]{background:#d9886a26;color:#d9886a}.dark .category-lyrics[data-astro-cid-4sn4zg3r]{background:#5b9a8b26;color:#7bc0ad}.dark .category-research[data-astro-cid-4sn4zg3r]{background:#6b8aa126;color:#8fb4cc}.prose h2{font-size:1.25rem;font-weight:600;margin-top:2rem;margin-bottom:.75rem;color:var(--color-text)}.prose h3{font-size:1.1rem;font-weight:600;margin-top:1.5rem;margin-bottom:.5rem;color:var(--color-text)}.prose p{font-size:.9rem;line-height:1.8;margin-bottom:1rem;color:var(--color-text-secondary)}.prose ul{list-style:none;padding-left:0;margin-bottom:1rem}.prose li{font-size:.9rem;line-height:1.8;color:var(--color-text-secondary);padding-left:1.25rem;position:relative}.prose li:before{content:"";position:absolute;left:0;top:.75rem;width:5px;height:5px;border-radius:50%;background:var(--color-accent)}.prose blockquote{border-left:2px solid var(--color-accent);padding-left:1rem;margin-bottom:1.5rem;font-style:italic;color:var(--color-muted)}.prose code{font-size:.85rem;padding:.15rem .4rem;border-radius:.25rem;background:var(--color-surface);color:var(--color-accent)}.prose figure{margin:2rem 0;text-align:center}.prose figure img{max-width:100%;border-radius:12px;box-shadow:0 2px 12px #00000014}.prose figcaption{margin-top:.5rem;font-size:.8rem;color:var(--color-muted);font-style:italic}.prose strong{font-weight:600;color:var(--color-text)}
+</style></head> <body class="min-h-screen">  <header class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md" style="background-color: rgba(244, 243, 238, 0.8);"> <div class="dark-header-bg"></div> <nav class="max-w-4xl mx-auto px-6 py-4 flex items-center justify-between"> <a href="/academic-site/" class="text-lg font-semibold" style="color: var(--color-text);">
+Zylen
+</a> <!-- Desktop nav --> <div class="hidden md:flex items-center gap-8"> <a href="/academic-site/publications/" class="text-sm transition-colors duration-300" style="color: var(--color-text-secondary); opacity: 0.7;"> Publications </a><a href="/academic-site/research/" class="text-sm transition-colors duration-300" style="color: var(--color-text-secondary); opacity: 0.7;"> Working Papers </a><a href="/academic-site/life/" class="text-sm transition-colors duration-300" style="color: var(--color-text-secondary); opacity: 0.7;"> Life </a><a href="/academic-site/blog/" class="text-sm transition-colors duration-300" style="color: var(--color-accent); opacity: 1;"> Blog </a><a href="/academic-site/projects/" class="text-sm transition-colors duration-300" style="color: var(--color-text-secondary); opacity: 0.7;"> Projects </a><a href="/academic-site/cv/" class="text-sm transition-colors duration-300" style="color: var(--color-text-secondary); opacity: 0.7;"> CV </a><a href="/academic-site/contact/" class="text-sm transition-colors duration-300" style="color: var(--color-text-secondary); opacity: 0.7;"> Contact </a> <button id="theme-toggle" class="w-8 h-8 flex items-center justify-center rounded-lg transition-colors duration-300" style="color: var(--color-muted);" aria-label="Toggle dark mode"> <!-- Sun icon (shown in dark mode) --> <svg class="w-4 h-4 hidden dark:block" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"> <circle cx="12" cy="12" r="5"></circle> <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path> </svg> <!-- Moon icon (shown in light mode) --> <svg class="w-4 h-4 block dark:hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"> <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path> </svg> </button> </div> <!-- Mobile menu button --> <button id="mobile-menu-btn" class="md:hidden w-8 h-8 flex items-center justify-center" style="color: var(--color-text);" aria-label="Menu"> <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"> <path d="M3 12h18M3 6h18M3 18h18"></path> </svg> </button> </nav> <!-- Mobile menu --> <div id="mobile-menu" class="hidden md:hidden px-6 pb-4"> <a href="/academic-site/publications/" class="block py-2 text-sm transition-colors duration-300" style="color: var(--color-text-secondary);"> Publications </a><a href="/academic-site/research/" class="block py-2 text-sm transition-colors duration-300" style="color: var(--color-text-secondary);"> Working Papers </a><a href="/academic-site/life/" class="block py-2 text-sm transition-colors duration-300" style="color: var(--color-text-secondary);"> Life </a><a href="/academic-site/blog/" class="block py-2 text-sm transition-colors duration-300" style="color: var(--color-text-secondary);"> Blog </a><a href="/academic-site/projects/" class="block py-2 text-sm transition-colors duration-300" style="color: var(--color-text-secondary);"> Projects </a><a href="/academic-site/cv/" class="block py-2 text-sm transition-colors duration-300" style="color: var(--color-text-secondary);"> CV </a><a href="/academic-site/contact/" class="block py-2 text-sm transition-colors duration-300" style="color: var(--color-text-secondary);"> Contact </a> <button id="theme-toggle-mobile" class="mt-2 text-sm" style="color: var(--color-muted);">
+Toggle theme
+</button> </div> </header> <!-- Spacer for fixed header --> <div class="h-16"></div> <script>
+  function toggleTheme() {
+    const html = document.documentElement;
+    const isDark = html.classList.toggle('dark');
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    // Update header bg
+    const header = document.querySelector('header');
+    if (header) {
+      header.style.backgroundColor = isDark
+        ? 'rgba(30, 30, 28, 0.8)'
+        : 'rgba(244, 243, 238, 0.8)';
+    }
+  }
+
+  // Init header bg
+  (function() {
+    const header = document.querySelector('header');
+    if (header && document.documentElement.classList.contains('dark')) {
+      header.style.backgroundColor = 'rgba(30, 30, 28, 0.8)';
+    }
+  })();
+
+  document.getElementById('theme-toggle')?.addEventListener('click', toggleTheme);
+  document.getElementById('theme-toggle-mobile')?.addEventListener('click', toggleTheme);
+
+  // Mobile menu toggle
+  document.getElementById('mobile-menu-btn')?.addEventListener('click', () => {
+    document.getElementById('mobile-menu')?.classList.toggle('hidden');
+  });
+
+  // Close mobile menu on link click
+  document.querySelectorAll('#mobile-menu a').forEach((link) => {
+    link.addEventListener('click', () => {
+      document.getElementById('mobile-menu')?.classList.add('hidden');
+    });
+  });
+</script> <main data-astro-cid-4sn4zg3r> <article class="py-24" data-astro-cid-4sn4zg3r> <div class="max-w-3xl mx-auto px-6" data-astro-cid-4sn4zg3r> <!-- Back link --> <a href="/academic-site/blog/" class="inline-flex items-center gap-1 text-xs mb-8 transition-colors duration-300" style="color: var(--color-muted);" data-astro-cid-4sn4zg3r> <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" data-astro-cid-4sn4zg3r> <path d="M19 12H5M12 19l-7-7 7-7" data-astro-cid-4sn4zg3r></path> </svg>
+Back to Blog
+</a> <!-- Header --> <h1 class="text-2xl md:text-3xl font-bold leading-tight" style="color: var(--color-text);" data-astro-cid-4sn4zg3r> 跑步机上的架构师：当 Claude 崩溃那一刻，我心慌出汗 </h1> <div class="mt-3 flex items-center gap-3 flex-wrap" data-astro-cid-4sn4zg3r> <span class="category-badge category-research" data-astro-cid-4sn4zg3r> 求索手记 </span> <span class="text-xs" style="color: var(--color-muted);" data-astro-cid-4sn4zg3r>2026-04-14</span> <span class="px-2 py-0.5 text-xs rounded-full" style="background: var(--color-surface); color: var(--color-muted); border: 1px solid var(--color-border);" data-astro-cid-4sn4zg3r> AI </span><span class="px-2 py-0.5 text-xs rounded-full" style="background: var(--color-surface); color: var(--color-muted); border: 1px solid var(--color-border);" data-astro-cid-4sn4zg3r> Claude Code </span><span class="px-2 py-0.5 text-xs rounded-full" style="background: var(--color-surface); color: var(--color-muted); border: 1px solid var(--color-border);" data-astro-cid-4sn4zg3r> 方法论 </span><span class="px-2 py-0.5 text-xs rounded-full" style="background: var(--color-surface); color: var(--color-muted); border: 1px solid var(--color-border);" data-astro-cid-4sn4zg3r> 自省 </span> </div> <!-- Divider --> <div class="mt-8 mb-10 flex items-center gap-3" data-astro-cid-4sn4zg3r> <div class="w-8 h-px" style="background: var(--color-accent);" data-astro-cid-4sn4zg3r></div> <div class="w-1.5 h-1.5 rounded-full" style="background: var(--color-accent);" data-astro-cid-4sn4zg3r></div> </div> <!-- Content --> <div class="prose" data-astro-cid-4sn4zg3r><p><em>阅读时间：约 5 分钟 · 2250 字</em></p>
+<p>前阵子某个深夜我在电脑前做一些收尾，打开 Terminal 想 commit 一个文件——Claude Code 弹了一个 500。</p>
+<p>我盯着屏幕看了三秒，然后发现自己心跳在加快，手心冒汗。</p>
+<p>那一刻我想的不是"API 可能宕机了"，也不是"换个 model 试试"。我想的是——<strong>如果这东西今晚一直挂，我明天怎么办？</strong></p>
+<p>这个念头让我意识到比那个 500 更重的事：我已经不是在用 Claude，是在<strong>被 Claude 持有</strong>。</p>
+<p>深度用它大概两个月了。两个月前我觉得它是工具。现在我做梦都在改 prompt。每天坐到电脑前打开的第一个窗口是 Claude Code。写作、写论文、写 skill、写邮件——我甚至已经开始忘记"没有 AI 的时候我是怎么写东西的"。</p>
+<figure><img src="/academic-site/blog/architect-on-a-treadmill-01.png" alt="" loading="lazy" /></figure>
+<h2>一、这不是我一个人的事</h2>
+<p>你可能会说：这是你自己的问题，是你的工具焦虑。</p>
+<p>我一开始也这么想。然后我去观察我的学生。</p>
+<p>他们打开电脑要写一份课程作业——<strong>第一个动作是打开 ChatGPT</strong>。不是打开 Word 先列个提纲，不是打开文献先看一眼，是直接开 AI 然后问"帮我写一篇 1500 字的讨论 XXX"。</p>
+<p>这不是他们堕落，是他们更诚实。他们只是承认了一件我这代人还在假装没发生的事——<strong>认知基础设施已经和电网、自来水并列</strong>。</p>
+<p>电力断了你慌不慌？自来水断了你慌不慌？那我 Claude 崩了心慌出汗，说是个人意志不坚定，好像也说不过去。</p>
+<p>当然，我心智模型里有一条写得很清楚——<strong>独立思考是逃逸速度</strong>。挑战者的声音立刻跳出来：你这不就是用"时代病"给自己开脱吗？</p>
+<p>我承认这话刺耳。但我想说的不是"所以依赖是对的"。我想说的是——<strong>依赖是默认值，觉知才是修行</strong>。挑战者防的是"用时代病当遮羞布"；但反过来，如果坚持"我要完全独立"，那就是另一种自欺——<strong>拒绝承认基础设施已经换了</strong>。</p>
+<p>心慌出汗不是弱点。那是我的身体比脑子先意识到：游戏规则换了。</p>
+<h2>二、我搭了一座山，自己迷路了</h2>
+<p>这段时间我陆续给 Claude Code 搭了一些 skill。</p>
+<p>规划检索的、拟大纲的、管理知识库的、生图的……什么顺手就搭一个。我甚至专门搭了一个让它"每次打开新窗口自动恢复上下文"的 skill。</p>
+<p>可笑的是，<strong>我经常记不住自己都搭了什么</strong>。</p>
+<p>有时候要用某个功能，我得回 <code>~/.claude/skills/</code> 去 <code>ls</code> 一下，翻一圈，才想起——对，这个我搭过。然后还要再 <code>cat skill.md</code> 重新熟悉自己的产品。</p>
+<p>这就是视频里说的<strong>诱发需求</strong>。Email 本该减少开会，结果变成 CC 五个人 BCC 三个。手机本该解放办公室，结果把我们绑在屏幕上 24 小时。AI 本该把我从中间层工作中释放出来——结果我现在把<strong>管理这些 skill</strong> 本身变成了新的中间层工作。</p>
+<p>工具越多，服务工具的时间就越多。我以为自己在做减法——让 AI 接手重复劳动——结果做的是高级的加法：<strong>把原本不存在的工具维护成本重新引入自己的生活</strong>。</p>
+<figure><img src="/academic-site/blog/architect-on-a-treadmill-02.png" alt="" loading="lazy" /></figure>
+<h2>三、跑步机上的架构师</h2>
+<p>但事情没那么简单。</p>
+<p>如果你问我，是不是该删掉这些 skill、回到"手动写论文"的状态——我会立刻说不。因为我不是在单纯地用 Claude 写论文，<strong>我在设计"如何用 Claude 写论文"</strong>。这是两件事。</p>
+<p>Joe 张国洋的视频把人分成三层：<strong>上游</strong>（战略/商业目的/客户判断）、<strong>中间层</strong>（写报告做简报）、<strong>下游</strong>（执行交付）。他说大多数人拿到 AI 后不往上下游走，而是用 AI 在中间层跑更快。</p>
+<p>但我的位置是第三种——<strong>我搭那个"让自己在中间层跑更快"的架构本身</strong>。</p>
+<figure><img src="/academic-site/blog/architect-on-a-treadmill-03.png" alt="" loading="lazy" /></figure>
+<p>这算上游吗？</p>
+<p>纵深的声音说：算。你从"科研工作者"进化成了"科研工作流的架构师"。福特造车是中间层，设计流水线的人是上游，定义"制造业可以流水线化"的人是元上游。你正在做的是第三件事。代价是残酷的——<strong>架构师的产出不在本季度 KPI 里</strong>。你设计一个 skill 不会马上换来一篇可见的成果，但它会在未来很长一段时间里以复利方式吃掉别人反复付出的时间成本。</p>
+<p>挑战的声音说：扯淡。搭 skill 是为了更快写论文，<strong>论文写作本身就是中间层</strong>。把中间层外包给工具，然后在"工具设计"的中间层跑——层级没换，位置换了。这叫<strong>元中间层</strong>，不叫战略层。真正的上游是三个问题：<strong>这个 idea 值不值得做？这个领域三年后往哪走？我这辈子要不要在工程管理赛道上押注？</strong>——这些问题，我搭再多 skill 也回答不了。</p>
+<p>两个声音我听了一晚上。我没法裁决谁对。</p>
+<p>但我想清楚了一件事：<strong>搭 skill 可以是元上游，也可以是元中间层——分野在于你先问了什么问题</strong>。</p>
+<p>先问"这个 idea 值不值得做"再搭 skill = 元上游；不问就直接搭 = 把战略焦虑偷偷换成了工程审美。</p>
+<p>想"这个 idea 要不要做"很痛，因为会错。设计一个 skill 不会错，只会"不够优雅"。架构师的快感之所以上瘾，恰恰因为它比面对真上游问题<strong>轻松</strong>。</p>
+<h2>四、没东西想说的人</h2>
+<p>然后我想起我一开始用 Claude Code 写论文时的一件事。</p>
+<p>我把流程越调越精细，越做越像一条自动化的生产线。但<strong>不管调多精细，它最后还是给不出一份完整的好东西</strong>。最后那一里路，依然是我自己去跟它深入交流，去重构段落逻辑，去决定某段到底该说什么。</p>
+<p>视频里 Joe 说这是<strong>判断力</strong>——区分 80 分和 60 分的能力。他说这是 AI 时代的稀缺资源。</p>
+<p>但我想更进一步。</p>
+<p>判断力这件事会被 AI 追上。Opus 4.6 比 3.5 已经好了很多。当 AI 读过几百万份审稿意见、几十万轮修改前后对比，它的"品味"会超过任何单个审稿人——不是因为它更聪明，<strong>是因为它的样本量是我的一万倍</strong>。</p>
+<p>我今天的判断力不是护城河，是<strong>时差</strong>。</p>
+<p>真正不会被追上的，是<strong>我想说什么</strong>。</p>
+<p>AI 可以生成 100 个逻辑自洽的版本，但"这篇论文<strong>应该</strong>说什么"——这不是能力问题，<strong>是主体性问题</strong>。即使 AGI 来了，"Zylen 想说什么"依然只有 Zylen 能决定。因为那是从我的生命经验、审美偏执、未解的困惑里长出来的。</p>
+<p>所以未来学者会分化。一类是没东西想说、只用 AI 凑字数的——他们是 AI 的寄生物，产出边际价值趋近于零。另一类是有自己非说不可的话、用 AI 放大它的——他们是 AI 的主人。</p>
+<p>稀缺的不是"会用 AI 的人"，<strong>是有东西可以让 AI 放大的人</strong>。</p>
+<h2>结尾：在觉知里上瘾</h2>
+<p>说回那个深夜。</p>
+<p>Claude 的 500 最后没挂太久，大概十分钟就恢复了。我接着 commit 完，洗澡，睡觉。第二天醒来，我依然打开电脑继续写。</p>
+<p>我不会戒 Claude。也不会假装自己"心慌出汗"是矫情。</p>
+<p>我只想记住一件事——<strong>热爱不是无毒的圣物，是我睁着眼睛承受自己中毒的能力</strong>。</p>
+<p>陀飞轮里林夕唱过：</p>
+<blockquote>全力地發亮，卻任由霉菌滋長，人愈大愈容易這樣。</blockquote>
+<p>人们以为热爱是纯粹的、不伤身的。但真正深入的投入永远是带痛的。区别不在痛不痛，<strong>在有没有觉知</strong>。</p>
+<p>上瘾是闭着眼睛冲进去，心慌了就再灌一勺刺激盖住它。 热爱是睁着眼睛冲进去，心慌了停下来问一句——<strong>我现在为什么在这里</strong>。</p>
+<p>所以从今晚开始我要做一件事：每完成一个东西，问自己——<strong>这件事让我更靠近上游（idea/方向）还是下游（影响/连接）？</strong> 如果答案是"哪里都没靠近"，那我今天赢来的，就只是忙碌的安全感。</p>
+<p>我依然会在 Claude 里做梦。但我希望梦里偶尔能有一瞬间的清醒——不是为了逃离这个依赖，是为了<strong>在依赖里保持不迷路</strong>。</p>
+<p>依赖是默认的，觉知是修行。</p></div> </div> </article> </main> <footer class="py-12 border-t" style="border-color: var(--color-border);"> <div class="max-w-4xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-2"> <p class="text-xs" style="color: var(--color-muted);">
+&copy; 2026 Zylen. All rights reserved.
+</p> <p class="text-xs" style="color: var(--color-muted);">
+Built with <a href="https://astro.build" target="_blank" rel="noopener" class="underline transition-colors duration-300" style="color: var(--color-accent);">Astro</a> </p> </div> </footer> </body></html> 
